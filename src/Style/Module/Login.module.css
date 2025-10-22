@@ -1,0 +1,95 @@
+/* Container */
+.loginContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card */
+.loginCard {
+  width: 360px;
+  padding: 40px 35px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title and subtitle */
+.loginTitle {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.loginSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.inputGroup {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button */
+.loginBtn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.loginBtn:hover {
+  background: #0056b3;
+}
+
+/* Signup text */
+.signupText {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #666;
+}
+
+.signupText a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signupText a:hover {
+  text-decoration: underline;
+}
