@@ -1,4 +1,4 @@
-# 🍳 Foodie Fusion – Smart Recipe Finder with Chatbot & Firebase Auth
+# 🍳 RecipeApp – Smart Recipe Finder with Chatbot & Firebase Auth
 
 **Foodie Fusion** is a modern React-based web application that lets users explore recipes, search meals, and chat with an AI-powered assistant for cooking help — all wrapped in a clean, responsive UI.  
 It also includes secure **Firebase login/signup**, context-based data flow, and modular code architecture designed for scalability.
@@ -13,7 +13,7 @@ It also includes secure **Firebase login/signup**, context-based data flow, and 
 - Displays meal image, category, instructions, and full ingredient list dynamically.
 
 ### 💬 Smart Chatbot
-- Integrated **ChatBox** powered by AI (Hugging Face / OpenAI API ready structure).
+- Integrated **ChatBox** UI for AI chatbot (Hugging Face / OpenAI API ready structure).
 - Floating chat icon with pop-up interface for interactive conversation.
 - Future-ready for advanced NLP integration.
 
