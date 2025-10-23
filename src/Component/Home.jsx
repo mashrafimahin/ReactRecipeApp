@@ -44,7 +44,7 @@ function Home() {
       </P>
       <FlexPlate
         style={{
-          width: "40%",
+          width: "100%",
           border: "1px solid #999",
           borderRadius: "100px",
           padding: "5px 20px",

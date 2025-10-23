@@ -16,7 +16,7 @@ import { faTimes, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 // main function
 function ChatBody({ func }) {
   return (
-    <ChatDiv>
+    <ChatDiv style={{ zIndex: "99999" }}>
       {/* header area */}
       <FlexPlate
         style={{

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 // Styled
 import { Main } from "../../Style/Comp.Style";
 
@@ -15,8 +15,10 @@ import ChatBox from "../../ChatBot/ChatBox";
 
 // context api
 import SearchContext from "../../Context/SearchContext";
+import { FirebaseContext } from "../../Context/FirebaseContext";
 
 function MainComp() {
+  const { check } = useContext(FirebaseContext);
   const [searchValue, setSearchValue] = useState("");
   const [show, setShow] = useState(true);
   const [popup, setPopup] = useState(false);
@@ -37,7 +39,7 @@ function MainComp() {
         <Recipe setPopup={setPopup} setMeal={setMeal} />
       </SearchContext.Provider>
       <Footer />
-      <ChatBox />
+      {check && <ChatBox />}
       {popup && <PopUp setPopup={setPopup} meal={meal} />}
     </Main>
   );

@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faCake,
-  faSortDown,
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
-import { Navigation, TitleText, FlexPlate } from "../Style/Comp.Style";
+import { Navigation, TitleText, FlexPlate, NavIcon } from "../Style/Comp.Style";
 
 // router
 import { NavLink } from "react-router-dom";
@@ -25,41 +24,54 @@ function NavBar() {
   return (
     <Navigation>
       <NavLink to="/" style={{ textDecoration: "none" }}>
-        <TitleText s="2.5rem" f='"Metal Mania", system-ui' c="green">
+        <TitleText
+          s="2.5rem"
+          f='"Metal Mania", system-ui'
+          c="green"
+          navs={true}
+        >
           RecipeApp
         </TitleText>
       </NavLink>
       <FlexPlate style={{ gap: "25px" }}>
         {check ? (
           <NavLink to="/dashboard">
-            <AfterLogin />
+            <NavIcon>
+              <AfterLogin />
+            </NavIcon>
           </NavLink>
         ) : (
           <NavLink to="/login">
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{ fontSize: "20px", cursor: "pointer" }}
-            />
+            <NavIcon>
+              <FontAwesomeIcon
+                icon={faUser}
+                style={{ fontSize: "18px", cursor: "pointer" }}
+              />
+            </NavIcon>
           </NavLink>
         )}
 
-        <FontAwesomeIcon
-          icon={faCake}
-          style={{ fontSize: "20px", cursor: "pointer" }}
-        />
+        <NavIcon>
+          <FontAwesomeIcon
+            title="Special dish"
+            icon={faCake}
+            style={{ fontSize: "18px", cursor: "pointer" }}
+          />
+        </NavIcon>
 
-        <FontAwesomeIcon
-          icon={check ? faArrowRightFromBracket : faSortDown}
-          style={{ fontSize: "20px", cursor: "pointer", marginTop: "-6px" }}
-          onClick={
-            check
-              ? () => {
-                  logOut();
-                  navigate("/");
-                }
-              : null
-          }
-        />
+        {check && (
+          <NavIcon>
+            <FontAwesomeIcon
+              title="Sign Out"
+              icon={faArrowRightFromBracket}
+              style={{ fontSize: "18px", cursor: "pointer", marginTop: "-6px" }}
+              onClick={() => {
+                logOut();
+                navigate("/");
+              }}
+            />
+          </NavIcon>
+        )}
       </FlexPlate>
     </Navigation>
   );

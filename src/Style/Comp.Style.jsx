@@ -24,6 +24,24 @@ export const Navigation = styled.nav`
   }
 `;
 
+export const NavIcon = styled.i`
+  height: 10px;
+  width: 10px;
+`;
+
+export const NavImg = styled.img`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+
+  @media screen and (max-width: 480px) {
+    height: 30px;
+    width: 30px;
+  }
+`;
+
 export const TitleText = styled.h1`
   font-size: ${(props) => (props.s ? props.s : "32px")};
   font-family: ${(props) => (props.f ? props.f : "sans-serif")};
@@ -31,6 +49,10 @@ export const TitleText = styled.h1`
   color: ${(props) => (props.c ? props.c : "#444")};
   font-weight: 400;
   cursor: default;
+
+  @media screen and (max-width: 480px) {
+    font-size: ${(props) => (props.navs ? "26px" : "32px")};
+  }
 `;
 
 export const HomePage = styled.section`
@@ -56,6 +78,10 @@ export const InputField = styled.input`
 
   &::placeholder {
     color: #999;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
   }
 `;
 
